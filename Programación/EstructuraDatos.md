@@ -26,7 +26,7 @@ Una estructura de datos puede ser pensada como un organizador o contenedor espec
 <br>
 <br>
 
-![Que_son_las_estructuras_de_datos](https://edteam-media.s3.amazonaws.com/community/original/4d26d5ef-9743-4df3-bf28-a5290295741c.jpg)
+![Que_son_las_estructuras_de_datos](edjpg.jpg)
 
 <br>
 <br>
