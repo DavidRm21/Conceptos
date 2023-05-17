@@ -73,3 +73,107 @@ Los comandos más comunes son:
 
 # **Consultas SQL**
 
+---
+
+<details>
+  <summary><b> ✔️ Recomendaciones</b></summary>
+
+1. Utiliza nombres que sean claros y concisos para facilitar la comprensión.
+
+2. Evitar caracteres especiales.
+
+3. Decide si utilizarás nombres en singular o en plural para las tablas y mantenlo consistente en todo el esquema de la base de datos. 
+
+4. Convenciones de formato (nombreTabla, NombreTable, Nombre_Tabla, nombre_tabla)
+
+5. Evitar palabras reservadas.
+
+</details>
+
+---
+
+<br>
+<br>
+
+
+
+#### 1. ***Con está sentencia creamos la base de datos***
+```CREATE DATABASE nombreBaseDeDatos;```
+
+#### 2. ***Le indicamos al lenguaje que base de datos vamos a modificar***
+
+```USE nombreBaseDeDatos;```
+
+#### 3. ***En este ejemplo crearemos dos tablas y una llave foránea***
+
+```
+
+CREATE TABLE nombreDeLaTabla  
+(   id_tabla INT(50) PRIMARY KEY AUTO_INCREMENT,
+    atributo1 VARCHAR(40) NOT NULL,
+    atributo2 VARCHAR(60),
+    atributo3 VARCHAR(255) NOT NULL UNIQUE,
+ 	atributo4 INT(50) CHECK (atributo4 >= 18)
+);
+
+ CREATE TABLE nombreDeLaTabla2  
+(   id_tabla2 INT(50) PRIMARY KEY AUTO_INCREMENT,
+    atributo1 VARCHAR(40) NOT NULL,
+    atributo2 VARCHAR(60) DEFAULT 'Desconocido',
+    atributo3 VARCHAR(255) NOT NULL UNIQUE,
+ 	atributo4 VARCHAR(30),
+    FKatributo INT(50) NOT NULL,  -- Aqui creamos una columna para asignar la llave foranea
+    FOREIGN KEY (FKatributo) REFERENCES nombreDeLaTabla(PRIMARY KEY) -- Con esta sentencia añadiremos nuestra columna que sera nuestra llave foranea de la tabla actual y la relacionaremos con la tabla destino en la columna de la llave primaria
+ );
+
+
+ ```
+<br>
+<br>
+
+***
+
+🔵 ***Si requerimos añadir una columna adiconal en una tabla.*** 
+###### [ 🔎tipos de datos](img/tiposDatos.jpg)
+
+``ALTER TABLE nombreDeLaTabla``
+``ADD nombreDeLaColumna tipoDato; ``
+
+***
+
+🔵 ***Si requerimos eliminar una columna adiconal en una tabla.***
+
+``ALTER TABLE nombreDeLaTabla``
+``DROP COLUMN nombreDeLaColumna;``
+
+***
+
+🔵 ***Si requerimos renombrar una columna en una tabla.***
+
+```ALTER TABLE nombreDeLaTabla```
+```RENAME COLUMN nombreDeLaColumna TO nuevoNombre; ```
+
+***
+
+🔵 ***Si requerimos añadir una llave foranea a una columna en una tabla.***
+
+``ALTER TABLE nombreDeLaTabla``
+``ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ; ``
+
+***
+
+### 💾 ***Está sentencia nos guardará la base de datos en un terminal o dispositivo de almacenamiento.*** 
+```BACKUP DATABASE nombreBaseDeDatos```
+```TO DISK = 'filepath';```
+
+***
+
+> ### - ❗️👀 ***Está sentencia nos eliminará permanentemente la base de datos***❗️
+> ```DROP DATABASE nombreBaseDeDatos;```
+> ### - Esta nos eliminará permanentemente la tabla definida
+> ```DROP TABLE nombreDeLaTabla;```
+
+***
+
+
+
