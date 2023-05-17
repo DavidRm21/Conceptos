@@ -76,7 +76,7 @@ Los comandos más comunes son:
 ---
 
 <details>
-  <summary><b> ✔️ Recomendaciones</b></summary>
+  <summary><b> ✔️ Recomendaciones antes de empezar con las consultas</b></summary>
 
 1. Utiliza nombres que sean claros y concisos para facilitar la comprensión.
 
@@ -95,7 +95,8 @@ Los comandos más comunes son:
 <br>
 <br>
 
-
+### **Pasos para crear una base de datos**
+---
 
 #### 1. ***Con está sentencia creamos la base de datos***
 ``CREATE DATABASE nombreBaseDeDatos;``
@@ -135,12 +136,12 @@ CREATE TABLE nombreDeLaTabla2  (
 ***
 
 🔵 ***Añadir una columna adicional en una tabla.*** 
-###### [ 🔎tipos de datos](img/tiposDatos.jpg)
 
 ``
 ALTER TABLE nombreDeLaTabla
 ADD nombreDeLaColumna tipoDato; 
 ``
+###### [ 🔎tipos de datos](img/tiposDatos.jpg)
 
 ***
 
@@ -178,6 +179,9 @@ TO DISK = 'filepath';
 ``
 
 ***
+
+<br>
+<br>
 
 > ### - ❗️👀 ***Eliminará permanentemente la base de datos***❗️
 > ```DROP DATABASE nombreBaseDeDatos;```
