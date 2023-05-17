@@ -136,4 +136,4 @@ Existen formas normales adicionales, como la Cuarta Forma Normal (4NF) y la Quin
 <br>
 
 
-# 🔎 [¿Qué es SQL? y consultas](ConsultasBD.md)
+# 🔎 [¿Qué es SQL? y consultas](2_ConsultasBD.md)

@@ -98,11 +98,11 @@ Los comandos más comunes son:
 
 
 #### 1. ***Con está sentencia creamos la base de datos***
-```CREATE DATABASE nombreBaseDeDatos;```
+``CREATE DATABASE nombreBaseDeDatos;``
 
 #### 2. ***Le indicamos al lenguaje que base de datos vamos a modificar***
 
-```USE nombreBaseDeDatos;```
+``USE nombreBaseDeDatos;``
 
 #### 3. ***En este ejemplo crearemos dos tablas y una llave foránea***
 
@@ -125,10 +125,8 @@ CREATE TABLE nombreDeLaTabla
     FKatributo INT(50) NOT NULL,  -- Aqui creamos una columna para asignar la llave foranea
     FOREIGN KEY (FKatributo) REFERENCES nombreDeLaTabla(PRIMARY KEY) -- Con esta sentencia añadiremos nuestra columna que sera nuestra llave foranea de la tabla actual y la relacionaremos con la tabla destino en la columna de la llave primaria
  );
-
-
  ```
-<br>
+
 <br>
 
 ***
@@ -136,35 +134,45 @@ CREATE TABLE nombreDeLaTabla
 🔵 ***Si requerimos añadir una columna adiconal en una tabla.*** 
 ###### [ 🔎tipos de datos](img/tiposDatos.jpg)
 
-``ALTER TABLE nombreDeLaTabla``
-``ADD nombreDeLaColumna tipoDato; ``
+``
+ALTER TABLE nombreDeLaTabla
+ADD nombreDeLaColumna tipoDato; 
+``
 
 ***
 
 🔵 ***Si requerimos eliminar una columna adiconal en una tabla.***
 
-``ALTER TABLE nombreDeLaTabla``
-``DROP COLUMN nombreDeLaColumna;``
+``
+ALTER TABLE nombreDeLaTabla
+DROP COLUMN nombreDeLaColumna;
+``
 
 ***
 
 🔵 ***Si requerimos renombrar una columna en una tabla.***
 
-```ALTER TABLE nombreDeLaTabla```
-```RENAME COLUMN nombreDeLaColumna TO nuevoNombre; ```
+``
+ALTER TABLE nombreDeLaTabla
+RENAME COLUMN nombreDeLaColumna TO nuevoNombre; 
+``
 
 ***
 
 🔵 ***Si requerimos añadir una llave foranea a una columna en una tabla.***
 
-``ALTER TABLE nombreDeLaTabla``
-``ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ; ``
+``
+ALTER TABLE nombreDeLaTabla
+ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ; 
+``
 
 ***
 
 ### 💾 ***Está sentencia nos guardará la base de datos en un terminal o dispositivo de almacenamiento.*** 
-```BACKUP DATABASE nombreBaseDeDatos```
-```TO DISK = 'filepath';```
+``
+BACKUP DATABASE nombreBaseDeDatos
+TO DISK = 'filepath';
+``
 
 ***
 
