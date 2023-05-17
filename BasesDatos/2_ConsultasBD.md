@@ -106,32 +106,35 @@ Los comandos más comunes son:
 
 #### 3. ***En este ejemplo crearemos dos tablas y una llave foránea***
 
-```
+<code>
+<pre>
 
-CREATE TABLE nombreDeLaTabla  
-(   id_tabla INT(50) PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE nombreDeLaTabla  (   
+    id_tabla INT(50) PRIMARY KEY AUTO_INCREMENT,
     atributo1 VARCHAR(40) NOT NULL,
     atributo2 VARCHAR(60),
     atributo3 VARCHAR(255) NOT NULL UNIQUE,
- 	atributo4 INT(50) CHECK (atributo4 >= 18)
+    atributo4 INT(50) CHECK (atributo4 >= 18)
 );
 
- CREATE TABLE nombreDeLaTabla2  
-(   id_tabla2 INT(50) PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE nombreDeLaTabla2  (   
+    id_tabla2 INT(50) PRIMARY KEY AUTO_INCREMENT,
     atributo1 VARCHAR(40) NOT NULL,
     atributo2 VARCHAR(60) DEFAULT 'Desconocido',
     atributo3 VARCHAR(255) NOT NULL UNIQUE,
- 	atributo4 VARCHAR(30),
-    FKatributo INT(50) NOT NULL,  -- Aqui creamos una columna para asignar la llave foranea
-    FOREIGN KEY (FKatributo) REFERENCES nombreDeLaTabla(PRIMARY KEY) -- Con esta sentencia añadiremos nuestra columna que sera nuestra llave foranea de la tabla actual y la relacionaremos con la tabla destino en la columna de la llave primaria
- );
- ```
+    atributo4 VARCHAR(30),
+    FKatributo INT(50) NOT NULL,
+    FOREIGN KEY (FKatributo) REFERENCES nombreDeLaTabla(id_tabla)
+);  
+
+</pre>
+</code>
 
 <br>
 
 ***
 
-🔵 ***Si requerimos añadir una columna adiconal en una tabla.*** 
+🔵 ***Añadir una columna adicional en una tabla.*** 
 ###### [ 🔎tipos de datos](img/tiposDatos.jpg)
 
 ``
@@ -141,7 +144,7 @@ ADD nombreDeLaColumna tipoDato;
 
 ***
 
-🔵 ***Si requerimos eliminar una columna adiconal en una tabla.***
+🔵 ***Eliminar una columna adicional en una tabla.***
 
 ``
 ALTER TABLE nombreDeLaTabla
@@ -150,7 +153,7 @@ DROP COLUMN nombreDeLaColumna;
 
 ***
 
-🔵 ***Si requerimos renombrar una columna en una tabla.***
+🔵 ***Renombrar una columna en una tabla.***
 
 ``
 ALTER TABLE nombreDeLaTabla
@@ -159,7 +162,7 @@ RENAME COLUMN nombreDeLaColumna TO nuevoNombre;
 
 ***
 
-🔵 ***Si requerimos añadir una llave foranea a una columna en una tabla.***
+🔵 ***Añade una llave foranea a una columna en una tabla.***
 
 ``
 ALTER TABLE nombreDeLaTabla
@@ -168,7 +171,7 @@ ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ;
 
 ***
 
-### 💾 ***Está sentencia nos guardará la base de datos en un terminal o dispositivo de almacenamiento.*** 
+### 💾 ***Guardará la base de datos en un terminal o dispositivo de almacenamiento.*** 
 ``
 BACKUP DATABASE nombreBaseDeDatos
 TO DISK = 'filepath';
@@ -176,7 +179,7 @@ TO DISK = 'filepath';
 
 ***
 
-> ### - ❗️👀 ***Está sentencia nos eliminará permanentemente la base de datos***❗️
+> ### - ❗️👀 ***Eliminará permanentemente la base de datos***❗️
 > ```DROP DATABASE nombreBaseDeDatos;```
 > ### - Esta nos eliminará permanentemente la tabla definida
 > ```DROP TABLE nombreDeLaTabla;```
