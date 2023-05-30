@@ -24,7 +24,7 @@ Los comandos DDL más comunes son:
 - **TRUNCATE** Permite eliminar todos los datos de una tabla, manteniendo la estructura de la tabla intacta.
 - **RENAME** Permite cambiar el nombre de un objeto de la base de datos, como una tabla o una columna.
 - **CONSTRAINT** Se utiliza para definir restricciones en las tablas, como claves primarias, claves foráneas, restricciones de integridad, entre otros.
-- **GRANT y REVOKE** Estos comandos se utilizan para otorgar o revocar permisos de acceso a los objetos de la base de datos.
+
 
 <br>
 <br>
@@ -113,13 +113,13 @@ Los comandos más comunes son:
 CREATE TABLE nombreDeLaTabla  (   
     id_tabla INT(50) PRIMARY KEY AUTO_INCREMENT,
     atributo1 VARCHAR(40) NOT NULL,
-    atributo2 VARCHAR(60),
+    atributo2 VARCHAR(60) DEFAULT 0,
     atributo3 VARCHAR(255) NOT NULL UNIQUE,
     atributo4 INT(50) CHECK (atributo4 >= 18)
 );
 
 CREATE TABLE nombreDeLaTabla2  (   
-    id_tabla2 INT(50) PRIMARY KEY AUTO_INCREMENT,
+    id_tabla2 INT(50) PRIMARY KEY,
     atributo1 VARCHAR(40) NOT NULL,
     atributo2 VARCHAR(60) DEFAULT 'Desconocido',
     atributo3 VARCHAR(255) NOT NULL UNIQUE,
@@ -133,9 +133,16 @@ CREATE TABLE nombreDeLaTabla2  (
 
 <br>
 
+🆕 ***Añade una llave foranea a una columna en una tabla existente.***
+
+``
+ALTER TABLE nombreDeLaTabla
+ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ; 
+``
+
 ***
 
-🔵 ***Añadir una columna adicional en una tabla.*** 
+🆕 ***Añadir una columna adicional en una tabla.*** 
 
 ``
 ALTER TABLE nombreDeLaTabla
@@ -145,16 +152,16 @@ ADD nombreDeLaColumna tipoDato;
 
 ***
 
-🔵 ***Eliminar una columna adicional en una tabla.***
+🔁 ***Alterar una columna y cambiar sus propiedades(tipo, capacidad, reglas, etc.)***
 
 ``
 ALTER TABLE nombreDeLaTabla
-DROP COLUMN nombreDeLaColumna;
+ALTER COLUMN nombreDeLaColumna VARCHAR(25); 
 ``
 
 ***
 
-🔵 ***Renombrar una columna en una tabla.***
+🔁 ***Renombrar una columna en una tabla.***
 
 ``
 ALTER TABLE nombreDeLaTabla
@@ -163,11 +170,11 @@ RENAME COLUMN nombreDeLaColumna TO nuevoNombre;
 
 ***
 
-🔵 ***Añade una llave foranea a una columna en una tabla.***
+🔁 ***Renombrar una tabla existente***
 
 ``
 ALTER TABLE nombreDeLaTabla
-ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ; 
+RENAME TABLE nombreDeLaTabla TO nuevoNombre; 
 ``
 
 ***
@@ -178,14 +185,33 @@ BACKUP DATABASE nombreBaseDeDatos
 TO DISK = 'filepath';
 ``
 
+
+
+<br>
+<br>
+
+
+
 ***
 
-<br>
-<br>
+🔥⛔️ ***Elimina el contenido de la tabla pero no la tabla***
 
-> ### - ❗️👀 ***Eliminará permanentemente la base de datos***❗️
+``
+TRUNCATE TABLE nombreDeLaTabla;
+``
+
+***
+
+🔥 ***Eliminar una columna de una tabla.***
+
+``
+ALTER TABLE nombreDeLaTabla
+DROP COLUMN nombreDeLaColumna;
+``
+
+> ### - ❗️👀 ⛔️***Eliminará permanentemente la base de datos***❗️
 > ```DROP DATABASE nombreBaseDeDatos;```
-> ### - Esta nos eliminará permanentemente la tabla definida
+> ### - ⛔️ Esta nos eliminará permanentemente la tabla definida
 > ```DROP TABLE nombreDeLaTabla;```
 
 ***
