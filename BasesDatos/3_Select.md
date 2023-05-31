@@ -1,8 +1,9 @@
-
+# **Consultas SELECT**
 
 <details>
   <summary><b>Base de datos implementada</b></summary>
 
+<pre>
 -- Crear la base de datos "restaurant"
 CREATE SCHEMA restaurant;
 
@@ -52,8 +53,11 @@ INSERT INTO Ordenes (ID, Fecha, PlatoID) VALUES
 (6, '2023-05-29', 6),
 (7, '2023-05-29', 7),
 (8, '2023-05-28', 8);
+</pre>
 
 </details>
+
+<br>
 
 ![Base de datos de ejemplo](./img/tablasEjemplo.jpg)
 
@@ -96,7 +100,7 @@ ORDER BY nombre DESC ;
 
 <br>
 
-## **Colocando "Alias"**
+### **Colocando "Alias"**
 ---
 
 🆕 ***Colocar alias a una columna***
@@ -115,7 +119,7 @@ FROM Platos AS pl ;
 
 <br>
 
-## **Filtrando la salida**
+### **Filtrando la salida**
 ---
 
 🆕 ***Trae todas las filas de la tabla platos donde el precio sea mayor a 9***
@@ -184,10 +188,10 @@ IN (1,3, 4, 8) ;
 <br>
 <br>
 
-## **Consultando una varias tablas**
+## **Consultando varias tablas**
 ---
 
-#### *JOIN o INNER JOIN*
+### *JOIN o INNER JOIN*
 
 ###### Esta es la forma más común de realizar una unión y se utiliza para combinar registros relacionados en ambas tablas.
 
@@ -200,7 +204,7 @@ INNER JOIN ordenes
 ON platos.ID = ordenes.ID ;
 </pre>
 
-#### *LEFT JOIN*
+### *LEFT JOIN*
 
 ###### Devuelve todos los registros de la tabla de la izquierda y los registros coincidentes de la tabla de la derecha.
 
@@ -213,7 +217,7 @@ LEFT JOIN ordenes
 ON platos.ID = ordenes.id ;
 </pre>
 
-#### *RIGTH JOIN*
+### *RIGTH JOIN*
 
 ###### Devuelve todos los registros de la tabla de la derecha y los registros coincidentes de la tabla de la izquierda.
 
@@ -226,7 +230,7 @@ RIGTH JOIN ordenes
 ON platos.ID = ordenes.id ;
 </pre>
 
-#### *FULL JOIN o FULL OUTER JOIN*
+### *FULL JOIN o FULL OUTER JOIN*
 
 ###### Es útil cuando se desea combinar todas las filas de ambas tablas y analizar las diferencias entre ellas.
 
@@ -237,4 +241,11 @@ SELECT *
 FROM platos 
 FULL JOIN ordenes;
 </pre>
+
+<br>
+
+## **Agregación y agrupación**
+---
+
+🆕 ***GROUP BY permite agrupar filas en función de los valores de una o varias columnas y aplicar funciones de agregación a cada grupo. Esto es útil para obtener información resumida y realizar cálculos sobre conjuntos de datos agrupados de manera lógica.***
 
