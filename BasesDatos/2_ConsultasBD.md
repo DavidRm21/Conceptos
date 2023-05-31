@@ -95,21 +95,23 @@ Los comandos más comunes son:
 <br>
 <br>
 
-### **Pasos para crear una base de datos**
+## **Pasos para crear una base de datos**
 ---
 
 #### 1. ***Con está sentencia creamos la base de datos***
-``CREATE DATABASE nombreBaseDeDatos;``
+<pre>
+CREATE DATABASE nombreBaseDeDatos;
+</pre>
 
 #### 2. ***Le indicamos al lenguaje que base de datos vamos a modificar***
 
-``USE nombreBaseDeDatos;``
+<pre>
+USE nombreBaseDeDatos;
+</pre>
 
 #### 3. ***En este ejemplo crearemos dos tablas y una llave foránea***
 
-<code>
 <pre>
-
 CREATE TABLE nombreDeLaTabla  (   
     id_tabla INT(50) PRIMARY KEY AUTO_INCREMENT,
     atributo1 VARCHAR(40) NOT NULL,
@@ -127,63 +129,65 @@ CREATE TABLE nombreDeLaTabla2  (
     FKatributo INT(50) NOT NULL,
     FOREIGN KEY (FKatributo) REFERENCES nombreDeLaTabla(id_tabla)
 );  
-
 </pre>
-</code>
 
 <br>
 
 🆕 ***Añade una llave foranea a una columna en una tabla existente.***
 
-``
+<pre>
 ALTER TABLE nombreDeLaTabla
-ADD FOREIGN KEY (nombreColumnaActual) REFERENCES nombreDeLaTabla2(PRIMARY KEY) ; 
-``
+ADD FOREIGN KEY (nombreColumnaActual) 
+REFERENCES nombreDeLaTabla2(PRIMARY KEY) 
+ON UPDATE CASCADE ON DELETE NO ACTION; 
+</pre>
 
 ***
 
 🆕 ***Añadir una columna adicional en una tabla.*** 
 
-``
+<pre>
 ALTER TABLE nombreDeLaTabla
-ADD nombreDeLaColumna tipoDato; 
-``
+ADD nombreDeLaColumna tipoDato;
+</pre> 
+
 ###### [ 🔎tipos de datos](img/tiposDatos.jpg)
 
 ***
 
 🔁 ***Alterar una columna y cambiar sus propiedades(tipo, capacidad, reglas, etc.)***
 
-``
+<pre>
 ALTER TABLE nombreDeLaTabla
 ALTER COLUMN nombreDeLaColumna VARCHAR(25); 
-``
+</pre>
 
 ***
 
 🔁 ***Renombrar una columna en una tabla.***
 
-``
+<pre>
 ALTER TABLE nombreDeLaTabla
 RENAME COLUMN nombreDeLaColumna TO nuevoNombre; 
-``
+</pre>
 
 ***
 
 🔁 ***Renombrar una tabla existente***
 
-``
+<pre>
 ALTER TABLE nombreDeLaTabla
 RENAME TABLE nombreDeLaTabla TO nuevoNombre; 
-``
+</pre>
 
 ***
 
 ### 💾 ***Guardará la base de datos en un terminal o dispositivo de almacenamiento.*** 
-``
+
+<pre>
 BACKUP DATABASE nombreBaseDeDatos
 TO DISK = 'filepath';
-``
+</pre>
 
 
 
@@ -196,25 +200,60 @@ TO DISK = 'filepath';
 
 🔥⛔️ ***Elimina el contenido de la tabla pero no la tabla***
 
-``
+<pre>
 TRUNCATE TABLE nombreDeLaTabla;
-``
+</pre>
 
 ***
 
 🔥 ***Eliminar una columna de una tabla.***
 
-``
+<pre>
 ALTER TABLE nombreDeLaTabla
 DROP COLUMN nombreDeLaColumna;
-``
+</pre>
 
 > ### - ❗️👀 ⛔️***Eliminará permanentemente la base de datos***❗️
-> ```DROP DATABASE nombreBaseDeDatos;```
+> <pre>DROP DATABASE nombreBaseDeDatos;</pre>
 > ### - ⛔️ Esta nos eliminará permanentemente la tabla definida
-> ```DROP TABLE nombreDeLaTabla;```
+> <pre>DROP TABLE nombreDeLaTabla;</pre>
 
-***
+<br>
+<br>
+<br>
+
+## **Manipular los registros de la base de datos**
+---
+
+
+🆕 ***Insertar datos en una tabla***
+
+<pre>
+ALTER INTO nombreDeLaTabla (nombreDeLaColumna1, nombreDeLaColumna2, ...)
+VALUES (valorColumna1, valorColumna2, ...);
+</pre>
+
+🔁 ***Actualizar datos en una tabla***
+
+<pre>
+UPDATE nombreDeLaTabla 
+SET nombreDeLaColumna1 = valorColumna1 
+WHERE condicion;
+</pre>
+
+🔥 ***Eliminar filas de una tabla***
+
+<pre>
+DELETE FROM nombreDeLaTabla 
+WHERE condicion;
+</pre>
+
+🔎 ***Permite seleccionar columnas específicas de una tabla, filtrar registros con condiciones, realizar cálculos y agregaciones, ordenar los resultados, etc.***
+
+<pre>
+SELECT nombreDeLaColumna FROM nombreDeLaTabla;
+</pre>
+
 
 
 
