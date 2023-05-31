@@ -1,5 +1,6 @@
 # **Consultas SELECT**
 
+
 <details>
   <summary><b>Base de datos implementada</b></summary>
 
@@ -249,3 +250,11 @@ FULL JOIN ordenes;
 
 🆕 ***GROUP BY permite agrupar filas en función de los valores de una o varias columnas y aplicar funciones de agregación a cada grupo. Esto es útil para obtener información resumida y realizar cálculos sobre conjuntos de datos agrupados de manera lógica.***
 
+
+<pre>
+SUM()
+COUNT()
+AVG()
+MAX()
+MIN()
+</pre>
