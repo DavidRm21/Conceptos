@@ -55,7 +55,7 @@ INSERT INTO Ordenes (ID, Fecha, PlatoID) VALUES
 
 </details>
 
-![Base de datos de ejemplo](./img/tablasEjemplo.jpg.)
+![Base de datos de ejemplo](./img/tablasEjemplo.jpg)
 
 
 <br>
