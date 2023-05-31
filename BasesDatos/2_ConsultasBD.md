@@ -229,7 +229,7 @@ DROP COLUMN nombreDeLaColumna;
 🆕 ***Insertar datos en una tabla***
 
 <pre>
-ALTER INTO nombreDeLaTabla (nombreDeLaColumna1, nombreDeLaColumna2, ...)
+INSERT INTO nombreDeLaTabla (nombreDeLaColumna1, nombreDeLaColumna2, ...)
 VALUES (valorColumna1, valorColumna2, ...);
 </pre>
 
@@ -248,7 +248,7 @@ DELETE FROM nombreDeLaTabla
 WHERE condicion;
 </pre>
 
-🔎 ***Permite seleccionar columnas específicas de una tabla, filtrar registros con condiciones, realizar cálculos y agregaciones, ordenar los resultados, etc.***
+🔎 [***Permite seleccionar columnas específicas de una tabla, filtrar registros con condiciones, realizar cálculos y agregaciones, ordenar los resultados, etc.***](3_Select.md)
 
 <pre>
 SELECT nombreDeLaColumna FROM nombreDeLaTabla;
