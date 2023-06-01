@@ -56,6 +56,8 @@ Luego de establecer la conexión podremos hacer uso de los siguientes objetos:
 
 - **ResultSet**: Representa el conjunto de resultados de una consulta SQL. Un ResultSet te *permite recorrer y acceder a los registros y los datos devueltos por la consulta.* Puedes moverte por el conjunto de resultados utilizando métodos como next(), que desplaza el cursor al siguiente registro, y acceder a los valores de las columnas utilizando métodos como getString(), getInt(), etc. 
 
+    Un ResultSet también te permite realizar actualizaciones en la base de datos a través de los métodos updateRow(), insertRow(), deleteRow(), entre otros.
+
 <br>
 <br>
 
