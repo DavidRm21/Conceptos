@@ -38,12 +38,14 @@ Sin embargo, también es importante tener en cuenta que cada estructura de datos
 <br>
 <br>
 
-### Algunas estructuras de datos son:
+## Podemos clasificar las estructuras en dos grandes grupos:
 
-<br>
+**Lineales:** Estas estructuras de datos organizan los elementos en una secuencia lineal, donde cada elemento tiene un sucesor y un predecesor, excepto el primero y el último elemento. 
+
+
 
 <details>
- <summary><b>🔍 Arreglos</b></summary>
+<summary><b>🔍 Arreglos (Arrays)</b></summary>
 Imagina que tienes una caja con varios compartimentos numerados. Cada compartimento puede contener un objeto. Ahora, piensa en esos compartimentos como un arreglo. Un arreglo es una estructura de datos que nos permite almacenar una colección de elementos del mismo tipo en una secuencia ordenada.
 
 <br>
@@ -76,7 +78,7 @@ Cada elemento en el arreglo tiene una posición única, llamada índice, que com
 - Aplicaciones científicas
 
 - Aplicaciones de procesamiento de texto
- 
+
 </details>
 
 <br>
@@ -121,7 +123,7 @@ Un ArrayList es una estructura de datos en la programación que nos permite alma
 <br>
 
 <details>
- <summary><b>🔍 Listas Enlazadas</b></summary>
+ <summary><b>🔍 Listas Enlazadas (Linked Lists)</b></summary>
 
 Imagina una cadena de personas tomadas de la mano. Cada persona tiene un brazo libre que puede sostener la mano de otra persona. Ahora, piensa en esa cadena de personas como una lista enlazada.
 
@@ -163,7 +165,7 @@ Una lista enlazada es una estructura de datos en la que cada elemento, llamado n
 <br>
 
 <details>
-  <summary><b>🔍 Pilas</b></summary>
+  <summary><b>🔍 Pilas (Stacks)</b></summary>
 
 Imagina una pila de platos en un restaurante. Cada vez que se lava un nuevo plato, se coloca en la parte superior, y cuando se quiere tomar un plato, siempre se toma el que está en la parte superior de la pila.
 
@@ -216,7 +218,7 @@ Una pila es una estructura de datos en la que los elementos se agregan y elimina
 <br>
 
 <details>
-<summary><b>🔍 Colas</b></summary>
+<summary><b>🔍 Colas (Queues)</b></summary>
 
 Imagina una fila de personas esperando en un banco. Cada vez que llega una nueva persona, se coloca al final de la fila, y cuando es su turno, se atiende y se retira de la fila. En este caso, el primero en llegar es el primero en ser atendido.
 
@@ -267,34 +269,18 @@ Una cola es una estructura de datos en la que los elementos se agregan al final 
 
 </details>
 
----
+
 
 <br>
 <br>
 <br>
 
-## Podemos clasificar las estructuras en dos grandes grupos:
+**No lineales:** Estas estructuras de datos no siguen una secuencia lineal y permiten la representación de relaciones más complejas entre los elementos. 
 
-- **Lineales:** Estas estructuras de datos organizan los elementos en una secuencia lineal, donde cada elemento tiene un sucesor y un predecesor, excepto el primero y el último elemento. 
+  - Arboles (Trees)
 
-    - Arreglos (Arrays)
+  - Grafos (Graphs)
 
-    - ArrayList
-
-    - Listas Enlazadas (Linked Lists)
-
-    - Pilas (Stacks)
-
-    - Colas (Queues)
-
-
-- **No lineales:** Estas estructuras de datos no siguen una secuencia lineal y permiten la representación de relaciones más complejas entre los elementos. 
-
-    - Arboles (Trees)
-
-    - Grafos (Graphs)
-
-    - Tablas de hash (Hash Tables)
+  - Tablas de hash (Hash Tables)
 
 ---
-

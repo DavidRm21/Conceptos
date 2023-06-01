@@ -17,8 +17,6 @@
 
     </details>
 
-    <br>
-
     Luego de haber guardado el paquete lo instalamos con el comando:
 
     > python get-pip.py
