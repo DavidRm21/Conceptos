@@ -17,8 +17,12 @@
 
     </details>
 
-<br>
+    <br>
 
+    Luego de haber guardado el paquete lo instalamos con el comando:
+
+    > python get-pip.py
+ 
 3. Importar el modulo mysql-connector en el archivo .py
 
     <pre>import mysql.connector</pre>
