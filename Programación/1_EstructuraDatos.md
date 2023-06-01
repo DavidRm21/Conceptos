@@ -1,4 +1,4 @@
-# Estructura de datos
+# **Estructura de datos**
 
 ---
 Una estructura de datos es una forma de organizar y almacenar nuestros datos para que podamos trabajar con ellos de manera más eficiente. Nos ayuda a mantener los datos ordenados y a realizar operaciones sobre ellos de manera rápida y sencilla.
@@ -9,7 +9,7 @@ Una estructura de datos puede ser pensada como un organizador o contenedor espec
 <br>
 
 
-### Ventajas:
+### ***Ventajas:***
 
 - **Eficiencia en el acceso y procesamiento de datos:** Las estructuras de datos están diseñadas para permitir un acceso rápido y eficiente a los datos, lo que mejora el rendimiento y la eficiencia del programa.
 
@@ -18,7 +18,8 @@ Una estructura de datos puede ser pensada como un organizador o contenedor espec
 - **Facilidad de manipulación de datos:** Las estructuras de datos proporcionan operaciones y algoritmos predefinidos para agregar, eliminar, buscar y manipular datos de manera conveniente y eficiente.
 
 
-### Desventajas:
+### ***Desventajas:***
+
 - **Complejidad en la implementación:** Algunas estructuras de datos pueden requerir una implementación compleja y detallada, lo que puede aumentar la complejidad del código y la posibilidad de errores.
 
 - **Limitaciones en el tamaño y capacidad**: Algunas estructuras de datos tienen un tamaño o capacidad máxima predefinida, lo que puede ser limitante si se necesita almacenar una gran cantidad de datos o si los requisitos de tamaño son variables.
@@ -283,4 +284,8 @@ Una cola es una estructura de datos en la que los elementos se agregan al final 
 
   - Tablas de hash (Hash Tables)
 
----
+<br>
+<br>
+<br>
+
+# [*Algoritmos de ordenamiento*](2_AlgoritmosOrdenamiento.md)
