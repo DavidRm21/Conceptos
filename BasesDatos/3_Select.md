@@ -194,7 +194,7 @@ FROM Animales AS Mascota ;
 ### **Filtrando la salida**
 ---
 
-🆕 ***Trae todas las filas de la tabla "Animales" donde el precio sea menor a 10***
+🆕 ***Trae todas las filas de la tabla "Animales" donde el peso sea menor a 10***
 
 <pre>
 SELECT * 
@@ -513,6 +513,76 @@ FROM animales;
 </details>
 
 <br>
+<br>
+<br>
 
 ## **Sub-consultas**
 ---
+
+Una subconsulta es una consulta que se anida dentro de otra consulta, o dentro de otra subconsulta. Existen diferentes tipos de subconsultas.
+
+*La subconsulta más sencilla devuelve exactamente una columna y exactamente una fila. Puede utilizarse con los operadores de comparación =, <, <=, > o >=.*
+
+🆕 ***Trae el nombre de los animales que tengan la misma edad de luna***
+
+<pre>
+SELECT nombre
+FROM animales
+WHERE edad = ( SELECT edad
+               FROM animales
+               WHERE nombre = 'Luna'
+              );
+</pre>
+
+<details>
+  <summary>Resultado</summary>
+
+  ![Consulta23](./img/Consulta23.PNG)
+
+</details>
+
+<br>
+
+*Una subconsulta también puede devolver varias columnas o varias filas. Estas subconsultas pueden utilizarse con los operadores IN, EXISTS, ALL o ANY.*
+
+🆕 ***Trae el nombre de los animales que pesan más de 2 y menos de 10***
+
+<pre>
+SELECT nombre 
+FROM animales 
+WHERE id_animal IN ( SELECT id_animal 
+                     FROM animales 
+                     WHERE peso > 2 AND peso < 10 
+                    ); 
+</pre>
+
+<details>
+  <summary>Resultado</summary>
+
+  ![Consulta24](./img/Consulta24.PNG)
+
+</details>
+
+<br>
+<br>
+<br>
+
+## **Operaciones de conjuntos**
+---
+
+Las operaciones de conjunto se utilizan para combinar los resultados de dos o más consultas en un único resultado. Las consultas combinadas deben devolver el mismo número de columnas y tipos de datos compatibles.
+
+<brx>
+
+![Operaciones](./img/operaciones.png)
+
+<br>
+
+🆕 ***UNION***
+UNION combina los resultados de dos conjuntos de resultados y elimina los duplicados. UNION ALL no elimina las filas duplicadas.
+
+🆕 ***INTERSECT***
+INTERSECT devuelve sólo las filas que aparecen en ambos conjuntos de resultados.
+
+🆕 ***EXCEPT***
+EXCEPT devuelve sólo las filas que aparecen en el primer conjunto de resultados pero no aparecen en el segundo conjunto de resultados.
