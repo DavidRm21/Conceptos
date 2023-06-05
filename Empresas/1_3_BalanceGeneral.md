@@ -49,3 +49,13 @@ Muestra cuanto efectivo tiene la empresa, la cantidad de deuda contraida y los b
 # Análisis horizontal(Estado de perdida y ganacias o estado de resultados)
 
 Análisis dinamicos ya que se emplean estados financieros de por lo menos dos periodos de tiempo para su realización
+
+Variación absoluta: Se obtiene de la diferencia del año reciente al año anterior.
+
+Variación relativa: Se obtiene de la diferencia del año reciente al año anterior dividido el valor del año anterior.
+
+# Análisis vertical de un estado de resultados
+
+Análisis estático, solo se emplea un periodo de tiempo. Determina la contribución relativa de cada elemento del estado de resultados al total de ingresos o ventas, lo que permite identificar tendencias, comparar diferentes periodos y evaluar la eficiencia y la rentabilidad de la empresa.
+
+Costo de ventas dividido entre los ingresos totales por 100%
