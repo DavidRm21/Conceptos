@@ -12,6 +12,7 @@ Los algoritmos de ordenamiento son herramientas fundamentales en el campo de la 
 Se ordena por pares y se va repitiendo 1 a 1 hasta que queda totalmente ordenado, es muy iterativo, poco eficiente (por la cantidad de iteraciones), pero muy sencillo de ejecutar.
 
 ![BubbleSort](./img/bbsort.gif)
+
 [Creditos: worldofivo](https://www.instagram.com/worldofivo/)
 
 <details>
@@ -60,6 +61,7 @@ public void display(int arr[]){
 Es un algoritmo de ordenamiento que selecciona el elemento más pequeño de una lista no ordenada en cada iteración y coloca ese elemento al principio de la lista no ordenada
 
 ![SelectionSort](./img/selection.gif)
+
 [Creditos: worldofivo](https://www.instagram.com/worldofivo/)
 
 <details>
@@ -325,5 +327,58 @@ La función factorial se llama a sí misma para calcular el factorial de un núm
 <br>
 
 En algunos casos, una solución iterativa puede ser más eficiente que una solución recursiva.
+
+<br>
+
+# Greedy Algorithm
+
+Los algoritmos greedy (o voraces) son una categoría de algoritmos en la que se toma una decisión óptima en cada etapa local con la esperanza de alcanzar una solución global óptima. Estos algoritmos siguen un enfoque heurístico que se basa en tomar la mejor opción disponible en el momento actual sin preocuparse por las consecuencias futuras.
+
+1. Algoritmo de la mochila (Knapsack problem): Selecciona los elementos más valiosos para incluir en una mochila, teniendo en cuenta la capacidad limitada de la mochila.
+
+2. Algoritmo de Kruskal: Encuentra un árbol de expansión mínima en un grafo ponderado, seleccionando de manera voraz las aristas más pequeñas y evitando ciclos.
+
+3. Algoritmo de Prim: Encuentra un árbol de expansión mínima en un grafo ponderado, comenzando desde un vértice y agregando iterativamente la arista de menor peso que conecta un vértice visitado con uno no visitado.
+
+4. Algoritmo de Dijkstra: Encuentra la ruta más corta entre dos nodos en un grafo ponderado, seleccionando vorazmente los nodos con la distancia mínima al origen.
+
+<details>
+  <summary><b>Código en Java (Ejemplo de cambio)</b></summary>
+
+<pre>
+public static void main(String[] args) {
+    int[] billete = {50, 20, 10, 5, 2, 1};
+    int nb = 6;
+    int i = 0;
+    int deuda = 138;
+
+    greedyCoins(deuda, i, billete, nb);
+}
+
+public static void greedyCoins(int deuda, int i, int[] billete, int nb) {
+    if (deuda == 0) {
+        System.out.println("Pago completado");
+        return;
+    } else {
+        int pagoDisp = deuda / billete[i];
+        if (pagoDisp > 0) {
+            int pagoRealizado = billete[i] * pagoDisp;
+            System.out.println(pagoRealizado);
+            deuda -= pagoRealizado;
+        }
+    }
+
+    if (i < nb) {
+        i += 1;
+        greedyCoins(deuda, i, billete, nb);
+    } else {    
+        System.out.println("Pago completado");
+    }
+}
+</pre>
+
+La función factorial se llama a sí misma para calcular el factorial de un número n. Cada llamada recursiva reduce el problema original al calcular el factorial de n-1, y así sucesivamente, hasta que se alcanza el caso base cuando n es igual a 0.
+
+</details>
 
 <br>
