@@ -18,7 +18,7 @@ Se ordena por pares y se va repitiendo 1 a 1 hasta que queda totalmente ordenado
 <details>
   <summary><b>Código en Java</b></summary>
 
-<pre>
+``` Java
 public void swap(int arr[], i, j){
     int temp = arr[i];
     arr[i] = arr[j];
@@ -50,7 +50,7 @@ public void display(int arr[]){
     }
     System.out.println();
 }
-</pre>
+```
 
 </details>
 
@@ -67,7 +67,7 @@ Es un algoritmo de ordenamiento que selecciona el elemento más pequeño de una 
 <details>
   <summary><b>Código en Java</b></summary>
 
-<pre>
+``` Java
 public void sort(int arr[]){
     selectionSort(arr, arr.length);
 }
@@ -95,7 +95,7 @@ public void display(int arr[]){
     System.out.println();
 }
 
-</pre>
+```
 
 </details>
 
@@ -113,7 +113,7 @@ Es un algoritmo eficiente para serie de datos cortas, pero no para largas.
 <details>
   <summary><b>Código en Java</b></summary>
 
-<pre>
+``` Java
 public void sort(int arr[]){
     int size = arr.length;
 
@@ -135,8 +135,7 @@ public void display(int arr[]){
     }
     System.out.println();
 }
-</pre>
-
+```
 </details>
 
 <br>
@@ -152,7 +151,7 @@ Utiliza el paradigma divide and conquer, y va comparando desde las esquinas al c
 <details>
   <summary><b>Código en Java</b></summary>
 
-<pre>
+``` Java
 public void sort(int arr[]){
     quickSort(arr, 0, arr.length - 1);
 }
@@ -190,7 +189,7 @@ public void display(int arr[]){
     }
     System.out.println();
 }
-</pre>
+```
 
 </details>
 
@@ -208,7 +207,7 @@ Es un algoritmo eficiente para muchos datos, pero no lo es tanto para pocos
 <details>
   <summary><b>Código en Java</b></summary>
 
-<pre>
+``` Java
 public void sort(int arr[]) {
         mergeSort(arr, 0, arr.length - 1);
     }
@@ -267,7 +266,8 @@ public void display(int arr[]) {
         System.out.print(arr[i] + " ");
     System.out.println();
 }
-</pre>
+
+```
 
 </details>
 
@@ -284,7 +284,7 @@ La recursión se basa en la idea de que un problema puede resolverse más fácil
 <details>
   <summary><b>Código en Java</b></summary>
 
-<pre>
+``` Java
 // Factorial con recursividad
 public void factorial(int n){
     if (n == 0){
@@ -318,7 +318,7 @@ public String reverseString(String str) {
     
     return reversed.toString();
 }
-</pre>
+```
 
 La función factorial se llama a sí misma para calcular el factorial de un número n. Cada llamada recursiva reduce el problema original al calcular el factorial de n-1, y así sucesivamente, hasta que se alcanza el caso base cuando n es igual a 0.
 
@@ -345,7 +345,7 @@ Los algoritmos greedy (o voraces) son una categoría de algoritmos en la que se 
 <details>
   <summary><b>Código en Java (Ejemplo de cambio)</b></summary>
 
-<pre>
+``` Java
 public static void main(String[] args) {
     int[] billete = {50, 20, 10, 5, 2, 1};
     int nb = 6;
@@ -375,7 +375,8 @@ public static void greedyCoins(int deuda, int i, int[] billete, int nb) {
         System.out.println("Pago completado");
     }
 }
-</pre>
+
+```
 
 La función factorial se llama a sí misma para calcular el factorial de un número n. Cada llamada recursiva reduce el problema original al calcular el factorial de n-1, y así sucesivamente, hasta que se alcanza el caso base cuando n es igual a 0.
 
